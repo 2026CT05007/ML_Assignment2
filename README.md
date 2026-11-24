@@ -1,7 +1,5 @@
 # ML_Assignment2
 Employee Attrition Prediction
-# ML_Assignment2
-Employee Attrition Prediction
 
 Employee Attrition Prediction Using Machine Learning
 1. Project Overview
