@@ -113,8 +113,7 @@ Matplotlib
 Seaborn
 Scikit-learn
 PyCharm
-8. Project Structure
-text
+8. Project Structure text
 Employee_Attrition_Prediction/
 │
 ├── Employee_Attrition_Prediction.py
