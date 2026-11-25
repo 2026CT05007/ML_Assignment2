@@ -165,21 +165,37 @@ Best-performing model based on the selected evaluation metric.
 
 The performance of all implemented algorithms is compared using the evaluation metrics.
 
-Algorithm	Accuracy	Precision	Recall	F1 Score	ROC-AUC	MCC
-Logistic Regression	To be calculated	To be calculated	To be calculated	To be calculated	To be calculated	To be calculated
-Decision Tree	To be calculated	To be calculated	To be calculated	To be calculated	To be calculated	To be calculated
-KNN	To be calculated	To be calculated	To be calculated	To be calculated	To be calculated	To be calculated
-Random Forest	To be calculated	To be calculated	To be calculated	To be calculated	To be calculated	To be calculated
-Gradient Boosting	To be calculated	To be calculated	To be calculated	To be calculated	To be calculated	To be calculated
-Gaussian Naive Bayes	To be calculated	To be calculated	To be calculated	To be calculated	To be calculated	To be calculated
+| **ML Model Name** | **Accuracy** | **AUC** | **Precision** | **Recall** | **F1** | **MCC** |
+| --- | --- | --- | --- | --- | --- | --- |
+| Logistic Regression | 0.744898 | 0.798260 | 0.340909 | 0.638298 | 0.444444 | 0.322883 |
+| Decision Tree | 0.792517 | 0.671419 | 0.390625 | 0.531915 | 0.450450 | 0.332153 |
+| kNN | 0.829932 | 0.625678 | 0.363636  | 0.085106 | 0.137931 | 0.109622 |
+| Naive Bayes | 0.646259 | 0.702472 | 0.260504  | 0.659574 | 0.373494 | 0.226452 |
+| Random Forest | 0.850340 | 0.787406 | 0.540541  | 0.425532 | 0.476190 | 0.394131 |
+
+
 
 Note: Actual performance values will be populated after executing the Python program.
+
 
 12. Conclusion
 
 This project demonstrates the application of different Machine Learning classification techniques for predicting employee attrition.
 
 By comparing Logistic Regression, Decision Tree, KNN, Random Forest, Gradient Boosting and Gaussian Naive Bayes, the project evaluates how different algorithms perform on employee attrition data.
+
+
+
+| **ML Model Name** | **Observation about model performance** |
+| --- | --- |
+| Logistic Regression | Provides a simple baseline and performs well when relationships are approximately linear. |
+| Decision Tree | Easy to understand and interpret but may overfit the training data. |
+| kNN | Works well with similar data points but is sensitive to feature scaling. |
+| Naive Bayes | Fast and efficient, especially for text classification, but assumes feature independence. |
+| Random Forest | Generally, provides good accuracy and reduces overfitting by combining multiple decision trees. |
+| Overall Winner for the dataset | Random Forest |
+
+
 
 The evaluation metrics, particularly Recall, F1 Score, ROC-AUC and Matthews Correlation Coefficient, help identify models that can effectively recognize employees who may leave the organization.
 
