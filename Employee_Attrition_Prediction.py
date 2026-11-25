@@ -10,8 +10,8 @@ import numpy as np
 # Visualization
 import matplotlib.pyplot as plt
 import seaborn as sns
-import tf
-from displayfunction import display
+#import tf
+from IPython.display import display
 
 # Preprocessing
 from sklearn.preprocessing import (
@@ -59,7 +59,7 @@ print("Libraries imported successfully!")
 import pandas as pd
 
 df = pd.read_csv(
-    "/Users/ipsitabiswal/PycharmProjects/PythonProject/ML_Assignment2/WA_Fn-UseC_-HR-Employee-Attrition.xls",
+    "/content/sample_data/WA_Fn-UseC_-HR-Employee-Attrition.xls",
     encoding="utf-8-sig"
 )
 
@@ -518,4 +518,3 @@ print(f"Python Version: {sys.version}")
 print(f"OS Platform: {sys.platform}")
 print(f"OS Architecture: {platform.architecture()[0]}")
 print(f"Processor: {platform.processor()}")
-
