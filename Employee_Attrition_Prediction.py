@@ -10,7 +10,7 @@ import numpy as np
 # Visualization
 import matplotlib.pyplot as plt
 import seaborn as sns
-#import tf
+import tf
 from IPython.display import display
 
 # Preprocessing
@@ -53,18 +53,18 @@ import joblib
 
 import warnings
 warnings.filterwarnings("ignore")
-
+print("BITS ID","2026CT05007")
 print("Libraries imported successfully!")
 
 import pandas as pd
 
 df = pd.read_csv(
-    "/content/sample_data/WA_Fn-UseC_-HR-Employee-Attrition.xls",
+    "/Users/ipsitabiswal/PycharmProjects/PythonProject/ML_Assignment2/WA_Fn-UseC_-HR-Employee-Attrition.xls",
     encoding="utf-8-sig"
 )
 
 print("Dataset loaded successfully!")
-
+print("BITS ID","2026CT05007")
 print("Dataset shape:", df.shape)
 
 df.head()
@@ -135,7 +135,7 @@ data["Attrition"] = data["Attrition"].map({
     "Yes": 1,
     "No": 0
 })
-
+print("BITS ID","2026CT05007")
 print("Preprocessing completed!")
 
 print("New dataset shape:", data.shape)
@@ -151,6 +151,7 @@ print("Number of input features:", X.shape[1])
 assert len(data) >= 1000, "Dataset must contain at least 1000 instances"
 assert X.shape[1] >= 12, "At least 12 input features are required"
 
+print("BITS ID","2026CT05007")
 print("\nDataset requirements satisfied!")
 
 plt.figure(figsize=(7, 5))
@@ -162,7 +163,7 @@ sns.countplot(
     palette="viridis",
     legend=False
 )
-
+print("BITS ID","2026CT05007")
 plt.title("Employee Attrition Distribution")
 plt.xlabel("Attrition (0 = No, 1 = Yes)")
 plt.ylabel("Count")
@@ -227,6 +228,15 @@ plt.show()
 X = df.drop('Attrition', axis=1)
 y = df['Attrition'].map({'Yes': 1, 'No': 0})
 
+# Examine class imbalance (Target Variable for e.g., Attrition)
+print("BITS ID","2026CT05007")
+print("Class Imbalance:", y.value_counts())
+class_counts = y.value_counts()
+class_percentages = y.value_counts(normalize=True)*100
+
+imbalance_summary = pd.DataFrame({'Count': class_counts, 'Percentage': class_percentages.round(2)})
+display(imbalance_summary)
+
 # Identify numerical and categorical columns
 numerical_features = X.select_dtypes(
     include=['int64', 'float64']
@@ -271,7 +281,7 @@ X_train = preprocessor.fit_transform(X_train)
 
 # Transform testing data
 X_test = preprocessor.transform(X_test)
-
+print("BITS ID","2026CT05007")
 print("Feature preprocessing pipeline created!")
 print("Training data shape:", X_train.shape)
 print("Testing data shape:", X_test.shape)
@@ -419,7 +429,7 @@ print("Gaussian Naive Bayes Results")
 print(classification_report(y_test, nb_pred))
 
 
-
+print("BITS ID","2026CT05007")
 print("Five machine learning models created!")
 
 # Store model predictions
@@ -463,6 +473,7 @@ for name, (pred, prob) in models.items():
 results_df = pd.DataFrame(results)
 
 # Display results
+print("BITS ID","2026CT05007")
 print("\nEmployee Attrition Model Comparison")
 print(results_df.to_string(index=False))
 
@@ -505,6 +516,8 @@ results_df = results_df.sort_values(
 )
 
 print("\nModel Ranking Based on MCC Score")
+print("BITS ID","2026CT05007")
+
 print(results_df[['Model', 'MCC Score']])
 
 best_model = results_df.iloc[0]['Model']
@@ -518,3 +531,4 @@ print(f"Python Version: {sys.version}")
 print(f"OS Platform: {sys.platform}")
 print(f"OS Architecture: {platform.architecture()[0]}")
 print(f"Processor: {platform.processor()}")
+
