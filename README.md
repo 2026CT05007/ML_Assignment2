@@ -124,28 +124,31 @@ Employee_Attrition_Prediction/
 │
 └── requirements.txt
 
-9. Installation and Setup
-Step 1: Clone the Repository
-bash
-git clone <your-github-repository-url>
+9. Installation and Setup  
 
-Step 2: Navigate to the Project Directory
-bash
-cd Employee_Attrition_Prediction
+Step 1: Clone the Repository bash git clone https://github.com/2026CT05007/ML_Assignment2 
 
-Step 3: Install Required Libraries
-bash
-pip install -r requirements.txt
+Step 2: Navigate to the Project Directory bash cd ML_Assignment2 
 
+Step 3: Install Required Libraries bash pip install -r requirements.txt 
 
-Alternatively, install the dependencies individually:
+Alternatively, install the dependencies individually: 
 
-bash
-pip install pandas numpy matplotlib seaborn scikit-learn
+bash pip install pandas numpy matplotlib seaborn scikit-learn 
 
-Step 4: Run the Python Program
-bash
-python Employee_Attrition_Prediction.py
+Step 4: Run the Python Program bash python Employee_Attrition_Prediction.py 
+
+Or, 
+
+Step 5. Upload the notebook 2026CT05007_ML_Assignment2.ipynb in Google Colab and under files upload the WA_Fn-UseC_-HR-Employee-Attrition.xls (csv files) in the sample_data folder as below given:- 
+
+ df = pd.read_csv( 
+
+"/content/sample_data/WA_Fn-UseC_-HR-Employee-Attrition.xls", 
+
+encoding="utf-8-sig" 
+
+) 
 
 10. Expected Outputs
 
